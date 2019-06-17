@@ -38,4 +38,12 @@ public class Student {
     public int compareByStudetScore(Student student) {
         return this.score - student.getScore();
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", score=" + score +
+                '}';
+    }
 }
