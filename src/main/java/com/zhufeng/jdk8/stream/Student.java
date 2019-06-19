@@ -14,6 +14,19 @@ public class Student {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", score=" + score +
+                ", age=" + age +
+                '}';
+    }
+
+    public static int compareByName(Student student1, Student student2) {
+        return student1.getName().compareToIgnoreCase(student2.getName());
+    }
+
     public String getName() {
         return name;
     }
