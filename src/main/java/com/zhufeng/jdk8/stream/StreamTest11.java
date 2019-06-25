@@ -3,7 +3,6 @@ package com.zhufeng.jdk8.stream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class StreamTest11 {
@@ -24,8 +23,6 @@ public class StreamTest11 {
 
         Map<Boolean, List<Student>> map = list.stream().collect(Collectors.partitioningBy(t -> t.getScore() > 90));
         System.out.println(map);
-
-
 
 
 
