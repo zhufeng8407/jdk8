@@ -16,11 +16,17 @@ public class ComparatorTest {
 
 //        list.stream().sorted(Comparator.comparingInt(t -> t.length())).forEach(System.out::println);
 
-        Collections.sort(list, Comparator.comparingInt((String item) -> item.length()).reversed());
+//        Collections.sort(list, Comparator.comparingInt((String item) -> item.length()).reversed());
+//
+//        Collections.sort(list, Comparator.comparingInt((Object item) -> 1).reversed());
 
-        Collections.sort(list, Comparator.comparingInt((Object item) -> 1).reversed());
+//        System.out.println(list);
 
+//        Collections.sort(list, Comparator.comparingInt(String::length).thenComparing((s1, s2) -> s1.compareToIgnoreCase(s2)));
+
+        Collections.sort(list, Comparator.comparingInt(String::length).thenComparing(String.CASE_INSENSITIVE_ORDER));
+
+        Collections.sort(list, Comparator.comparingInt(String::length).thenComparing(Comparator.comparing(String::toLowerCase)));
         System.out.println(list);
-
     }
 }
