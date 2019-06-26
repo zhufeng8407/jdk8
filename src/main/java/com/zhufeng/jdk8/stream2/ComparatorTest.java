@@ -24,9 +24,13 @@ public class ComparatorTest {
 
 //        Collections.sort(list, Comparator.comparingInt(String::length).thenComparing((s1, s2) -> s1.compareToIgnoreCase(s2)));
 
-        Collections.sort(list, Comparator.comparingInt(String::length).thenComparing(String.CASE_INSENSITIVE_ORDER));
+//        Collections.sort(list, Comparator.comparingInt(String::length).thenComparing(String.CASE_INSENSITIVE_ORDER));
 
-        Collections.sort(list, Comparator.comparingInt(String::length).thenComparing(Comparator.comparing(String::toLowerCase)));
+//        Collections.sort(list, Comparator.comparingInt(String::length).thenComparing(Comparator.comparing(String::toLowerCase)));
+
+
+         Collections.sort(list, Comparator.comparingInt(String::length)
+                 .thenComparing(String::toLowerCase, Comparator.reverseOrder()));
         System.out.println(list);
     }
 }
