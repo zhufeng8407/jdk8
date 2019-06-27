@@ -29,8 +29,13 @@ public class ComparatorTest {
 //        Collections.sort(list, Comparator.comparingInt(String::length).thenComparing(Comparator.comparing(String::toLowerCase)));
 
 
-         Collections.sort(list, Comparator.comparingInt(String::length)
-                 .thenComparing(String::toLowerCase, Comparator.reverseOrder()));
+//         Collections.sort(list, Comparator.comparingInt(String::length)
+//                 .thenComparing(String::toLowerCase, Comparator.reverseOrder()));
+
+        Collections.sort(list, Comparator.comparingInt(String::length).reversed()
+                .thenComparing(String::toLowerCase, Comparator.reverseOrder()));
         System.out.println(list);
     }
+
+
 }
