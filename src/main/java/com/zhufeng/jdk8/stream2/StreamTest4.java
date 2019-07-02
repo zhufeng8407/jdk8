@@ -8,8 +8,8 @@ public class StreamTest4 {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("hello", "world", "hello world", "welcome", "person", "Student");
 
-//        list.stream().forEach(System.out::println);
+        list.stream().forEach(System.out::println);
 
-        list.parallelStream().forEach(System.out::println);
+//        list.parallelStream().forEach(System.out::println);
     }
 }
